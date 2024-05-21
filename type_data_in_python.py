@@ -15,3 +15,17 @@ largest_value(first_type, second_type)
 
 # 2. Написати програму визначення координатної чверті, перевіряючи спочатку координату «Y».
 # 2. Write a program to determine the coordinate quarter, first checking the "Y" coordinate.
+
+
+def coordinat_quarter(value: float) -> None:
+    if float(value) > 0:
+        return print(f"Your coordinate {value} in I quarter")
+    elif value < 0:
+        return print(f"Your coordinate {value} in II quarter")
+    else:
+        return print(f"Your coordinate in axis Y")
+
+
+input_coordinate: float = float(input("Write the coordinate Y here: "))
+
+coordinat_quarter(input_coordinate)
