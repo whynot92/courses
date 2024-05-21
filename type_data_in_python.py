@@ -13,6 +13,7 @@ second_type: int = int(input("Write your second number here: "))
 
 largest_value(first_type, second_type)
 
+
 # 2. Написати програму визначення координатної чверті, перевіряючи спочатку координату «Y».
 # 2. Write a program to determine the coordinate quarter, first checking the "Y" coordinate.
 
@@ -29,3 +30,15 @@ def coordinat_quarter(value: float) -> None:
 input_coordinate: float = float(input("Write the coordinate Y here: "))
 
 coordinat_quarter(input_coordinate)
+
+
+# 3. Написати програму, яка приймає на вхід кількість балів (ціле число). Якщо кількість балів студента більше 80,
+# то вивести повідомлення, що студент здав іспит. В протилежному випадку написати, що іспит не складено
+
+# 3. Write a program that accepts as input the number of points (an integer). If the number of points of the student
+# is more than 80, then display a message that the student has passed the exam. Otherwise, write that the exam has not
+# been passed
+
+
+def students_exam():
+    pass
