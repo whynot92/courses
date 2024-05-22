@@ -54,3 +54,25 @@ print(f'10 - (6 + 2) == 2 - {10 - (6 + 2) == 2}')    # True
 print(f'(9 / 3) + (5 * 2) <= 20 - {(9 / 3) + (5 * 2) <= 20}')    # True
 print(f'(7 % 3) * (2 + 3) >= 10 - {(7 % 3) * (2 + 3) >= 10}')    # False
 print(f'(10 / 2) + (8 - 4) > 9 - {(10 / 2) + (8 - 4) > 9}')    # False
+
+# 5. Напишіть програму, яка за даним N від 1 до 9 виводить на екран N пінгвінів. Зображення одного пінгвіна має розмір
+# 5×9 символів, між двома сусідніми пінгвінами також є порожній (з прогалин) стовпець.
+
+# number: int = int(input("Write your number from 1 - 9: "))
+#
+# penguin = r'''
+#     _~_
+#    (o o)
+#   /  V  \
+#  /(  _  )\
+#    ^^ ^^'''
+#
+# print(penguin * number)
+
+# 6. N школярів ділять K яблук порівну, залишок, що не ділиться, залишається в кошику. Скільки яблук дістанеться
+# кожному школяру?
+
+number_of_students: int = int(input("Write number of students here: "))
+number_of_apples: int = int(input("Write number of apples here: "))
+
+print(f'Each student receives {number_of_apples // number_of_students}')
