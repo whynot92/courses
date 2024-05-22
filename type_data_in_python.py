@@ -1,44 +1,44 @@
-# 1. Напишіть програму, яка зчитує два цілих числа A та B і виводить найбільше значення з них.
-# 1. Write a program that reads two integers A and B and outputs the largest value from them.
+# 1. Створити дві змінні типу string і помістити туди ім’я та прізвище. Вивести привітання, враховуючи персональні дан:
 
-def largest_value(first_value: int, second_value: int) -> None:
-    if int(first_value) > int(second_value):
-        return print(f"Your first number {first_value} is greater than your second number {second_value}")
-    elif int(second_value) > int(first_value):
-        return print(f"Your second number {second_value} is greater than your first number {first_value}")
+first_name: str = 'Vadym'
+second_name: str = 'Sokolov'
 
+print(f'Hello {first_name} {second_name}!!!')
 
-first_type: int = int(input("Write your first number here: "))
-second_type: int = int(input("Write your second number here: "))
+# 2. Ввести з клавіатури 2 числа, знайти різницю, суму, добуток та остачу першого числа від другого:
 
-largest_value(first_type, second_type)
+first_input_user: int = int(input('Write here your first number: '))
+second_input_user: int = int(input('Write here your second number: '))
+answer: int = 0
 
-
-# 2. Написати програму визначення координатної чверті, перевіряючи спочатку координату «Y».
-# 2. Write a program to determine the coordinate quarter, first checking the "Y" coordinate.
-
-
-def coordinat_quarter(value: float) -> None:
-    if float(value) > 0:
-        return print(f"Your coordinate {value} in I quarter")
-    elif value < 0:
-        return print(f"Your coordinate {value} in II quarter")
-    else:
-        return print(f"Your coordinate in axis Y")
+if first_input_user > second_input_user:
+    answer = first_input_user - second_input_user
+    print(answer)
+elif first_input_user < second_input_user:
+    second_input_user, first_input_user = first_input_user, second_input_user
+    answer = first_input_user - second_input_user
+    print(answer)
 
 
-input_coordinate: float = float(input("Write the coordinate Y here: "))
+print(first_input_user + second_input_user)
+print(first_input_user / second_input_user)
+print(first_input_user ** second_input_user)
+print(first_input_user % second_input_user)
 
-coordinat_quarter(input_coordinate)
+# 3. Знайдіть результат операції:
+
+print(f'10 + 10 // 2 = {10 + 10 // 2}')
+print(f'18 / 3 ** 2 = {18 / 3 ** 2}')
+print(f'14 % 4 = {14 % 4}')
+print(f'10 * 10 + 5 = {10 * 10 + 5}')
+print(f'5 ** 2 - 10 = {5 ** 2 - 10}')
+print(f'20 * 5 // 4 = {20 * 5 // 4}')
+print(f'20 + 2 * 4 = {20 + 2 * 4}')
+print(f'25 - 10 % 5 = {25 - 10 % 5}')
+print(f'16 // 4 ** 2 = {16 // 4 ** 2}')
+print(f'30 - 15 * 2 = {30 - 15 * 2}')
 
 
-# 3. Написати програму, яка приймає на вхід кількість балів (ціле число). Якщо кількість балів студента більше 80,
-# то вивести повідомлення, що студент здав іспит. В протилежному випадку написати, що іспит не складено
-
-# 3. Write a program that accepts as input the number of points (an integer). If the number of points of the student
-# is more than 80, then display a message that the student has passed the exam. Otherwise, write that the exam has not
-# been passed
 
 
-def students_exam():
-    pass
+
