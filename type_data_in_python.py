@@ -76,3 +76,31 @@ number_of_students: int = int(input("Write number of students here: "))
 number_of_apples: int = int(input("Write number of apples here: "))
 
 print(f'Each student receives {number_of_apples // number_of_students}')
+
+# 7. школярів поділили K яблук порівну, залишок, що не ділиться, залишився в кошику. Скільки яблук залишилось у кошику?
+
+number_of_students_one: int = int(input("Write number of students here: "))
+number_of_apples_one: int = int(input("Write number of apples here: "))
+
+print(f'Left in the cart {number_of_apples_one % number_of_students_one}')
+
+# 8. Оголосити змінну - довжину сторони квадрату. Обчислити площу квадрату і вивести її на екран.
+
+side_of_a_square: int = 15
+
+print(f'The area of the square is {side_of_a_square * 4}')
+
+# 9. Дано натуральне число. Виведіть останню цифру.
+
+value_number: str = input("Write your number here: ")
+
+gen_list = [el for el in value_number if el.isdigit()]
+print(gen_list[-1])
+
+# 10. Дано позитивне двозначне число. Знайдіть число десятків у ньому.
+
+two_digit_number: int = int(input("Write a positive two-digit number here: "))
+
+answer = two_digit_number // 10
+
+print(f'The number has {answer} tens')
