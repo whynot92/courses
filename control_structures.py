@@ -94,4 +94,3 @@ if user_age >= 18:
     print(f"{user_name} access is allowed.")
 else:
     print(f"{user_name} access is not allowed.")
-
