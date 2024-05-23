@@ -68,3 +68,30 @@ elif number > 0:
     print(f'Number {number} is positive')
 else:
     print(f'{number} does not belong to positive either')
+
+# 7. Користувач вводить з клавіатур 2 числа, вивести на екран більше з них у вигляді, перше число більше за друге або
+# друге число більше за перше.
+# 7. The user enters 2 numbers from the keyboard, display more of them on the screen in the form, the first number is
+# greater than the second or the second number is greater than the first.
+
+first_number: int = int(input("Write here your first number: "))
+second_number: int = int(input("Write here your second number"))
+
+if first_number > second_number:
+    print(f"The first number {first_number} is greater than the second {second_number}")
+elif first_number < second_number:
+    print(f"The second number {second_number} is greater than the first {first_number}")
+
+# 8. Користувач вводить імя та свій вік, треба вивести на екран, якщо користувачеві більше або рівно 18 то вивести
+# "_імя_ доступ дозволено" інакше "_імя_ доступ не дозволено"
+# 8. The user enters his name and age, it should be displayed on the screen, if the user is over or equal to 18,
+# then display "_name_ access is allowed" otherwise "_name_ access is not allowed"
+
+user_name: str = input("Write your firstname here: ")
+user_age: int = int(input("Write here your age: "))
+
+if user_age >= 18:
+    print(f"{user_name} access is allowed.")
+else:
+    print(f"{user_name} access is not allowed.")
+
