@@ -104,3 +104,39 @@ two_digit_number: int = int(input("Write a positive two-digit number here: "))
 answer = two_digit_number // 10
 
 print(f'The number has {answer} tens')
+
+# 11. Запишіть літеру 'A' (латинську, велику) 100 разів поспіль.
+
+print('A' * 100)
+
+# 12. Дано ціле число N. Виведіть наступне за ним парне число.
+
+N: int = int(input("Enter an integer: "))
+
+if N % 2 == 0:
+    next_even = N + 2
+else:
+    next_even = N + 1
+
+print(f"Next for, {N}, even number:, {next_even}")
+
+# 13. Задане число N записали 100 разів поспіль і потім піднести до квадрату. Що вийшло?
+
+N: str = input("Write your number here: ")
+
+print(f'Your answer = {int((N * 100)) ** 2}')
+
+
+# 14. Довжина Київської кільцевої автомобільної дороги – 107 кілометрів. Байкер Вася стартує з нульового кілометра цієї
+# дороги та їде зі швидкістю v кілометрів на годину. На якій відмітці він зупиниться через годину?
+
+speed_bike: int = int(input("Write here your speed: "))
+start: int = 0
+print(f'The biker will stop at a distance of {start + speed_bike} km in one hour.')
+
+# 15. За день машина проїжджає N км. Скільки днів потрібно, щоби проїхати маршрут довжиною M кілометрів?
+
+N: int = int(input("Enter the number of kilometers the car drives per day: "))
+M: int = int(input("Enter the total length of the route in kilometers: "))
+
+print(f"Number of days required to travel the route = {M / N}")
