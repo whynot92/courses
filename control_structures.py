@@ -48,7 +48,14 @@ if number < 0:
     print(f'Number {number} is negative')
 elif number > 0:
     print(f'Number {number} is positive')
+
+# 6. Ввести число, визначити чи воно додатнє,  відємне або воно нуль
+
+number: int = int(input("Write here your number: "))
+
+if number < 0:
+    print(f'Number {number} is negative')
+elif number > 0:
+    print(f'Number {number} is positive')
 else:
     print(f'{number} does not belong to positive either')
-
-
