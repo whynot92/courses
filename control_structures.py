@@ -94,3 +94,85 @@ if user_age >= 18:
     print(f"{user_name} access is allowed.")
 else:
     print(f"{user_name} access is not allowed.")
+
+# 9. Напишіть програму, яка запитує у користувача число і виводить повідомлення "Число парне" або "Число непарне",
+# в залежності від того, чи є число парним чи непарним.
+# 9. Write a program that asks the user for a number and outputs the message "Number is even" or "Number is odd",
+# depending on whether the number is even or odd.
+
+first_user_number: int = int(input("Write here your first number: "))
+
+if first_user_number % 2 == 0:
+    print("The number is even")
+elif first_user_number % 2 == 1:
+    print("The number is odd")
+
+# 10. Напишіть програму, яка запитує у користувача число і виводить повідомлення "Число ділиться на 3" або "Число не
+# ділиться на 3", в залежності від того, чи ділиться число на 3 без залишку.
+# 10. Write a program that asks the user for a number and outputs the message "The number is divisible by 3" or
+# "The number is not is divisible by 3", depending on whether the number is divisible by 3 without a remainder.
+
+first_user_number: int = int(input("Write here your number: "))
+
+if first_user_number % 3 == 0:
+    print("The number is divisible by 3")
+elif first_user_number % 3 == 1:
+    print("Did not is divisible by 3")
+
+# 11.Напишіть програму, яка приймає три цілих числа і перевіряє, чи є перше число кратним сумі другого і третього числа.
+# 11. Write a program that accepts three integers and checks whether the first number is a multiple of the sum
+# of the second and third numbers.
+
+input_first_number: int = int(input("Write here your first number: "))
+input_second_number: int = int(input("Write here your second number: "))
+input_third_number: int = int(input("Write here you third number: "))
+
+if input_first_number % (input_second_number + input_third_number) == 0:
+    print("The first number is a multiple of the sum of the second and third numbers")
+else:
+    print("The first number is not a multiple of the sum of the second and third numbers")
+
+# 12 . Напишіть програму, яка приймає два цілих числа і перевіряє, чи є перше число кратним другому.
+# 12. Write a program that takes two integers and checks whether the first number is a multiple of the second.
+
+first_integer: int = int(input("Write here your first number: "))
+second_integer: int = int(input("Write here your second number: "))
+
+if first_integer % second_integer == 0:
+    print(f"The first number {first_integer} is a multiple of the second {second_integer}.")
+else:
+    print(f"The first number {first_integer} is not a multiple of the second ({second_integer}).")
+
+# 13. Користувач вводить свій вік, вивести на екран повідомлення чи користувач це дитина, підліток, дорослий або
+# престарілий.
+# 13. The user enters his age, to display a message on the screen whether the user is a child, teenager, adult or
+# elderly.
+
+age_user: int = int(input("Write here your age: "))
+
+if age_user < 0:
+    print("Enter the correct age.")
+elif age_user < 13:
+    print("You are a child.")
+elif age_user < 18:
+    print("You are a teenager.")
+elif age_user < 65:
+    print("You are an adult.")
+else:
+    print("You are an old man.")
+
+# 14. Дано три цілих числа. Визначте, скільки з них збігаються. Програма повинна вивести одне з чисел:
+# 3 (якщо всі збігаються), 2 (якщо два збігаються) або 0 (якщо всі числа є різними).
+# 14. Three integers are given. Determine how many of them match. The program should output one of the numbers:
+# 3 (if all match), 2 (if two match), or 0 (if all numbers are different).
+
+num_one: int = int(input("Write first number: "))
+num_two: int = int(input("Write second number: "))
+num_three: int = int(input("Write third number: "))
+
+if num_one == num_two == num_three:
+    print(3)
+elif num_one == num_two or num_one == num_three or num_two == num_three:
+    print(2)
+else:
+    print(0)
