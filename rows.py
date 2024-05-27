@@ -300,6 +300,175 @@ for letter in input_string:
 
 print(letter_counts)
 
+# 8. Порахувати, яка літера найбільш часто зустрічається у вашому прізвищі
+#
+# 8. Calculate which letter occurs most often in your last name
+
+second_name: str = "Sokolov"
+second_name: str = second_name.lower()
+
+second_name_dict: dict = {}
+
+for i in second_name:
+    if i in second_name_dict:
+        second_name_dict[i] += 1
+    else:
+        second_name_dict[i] = 1
+
+print(second_name_dict)
+
+# 9.Ввести строку з клавіатури. Видалити з неї всі цифри.
+#
+# 9.Enter the term from the keyboard. Remove all the numbers from it.
+
+input_user: str = input("Write here your string: ")
+
+answer_string: str = ""
+
+for i in input_user:
+    answer_string += "" if i.isdigit() else i
+
+print(answer_string)
+
+# 10. Розділити рядок на слова і вивести їх в порядку зворотньому до алфавітного.
+#
+# 10. Divide the line into words and display them in reverse alphabetical order.
+
+str_user: str = "J R F A T X K O V W C L Q E Z G S H M B P N U D I Y"
+
+list_string: list = str_user.split(" ")
+print(" ".join(sorted(list_string, reverse=True)))
+
+# 11. Визначити, чи є рядок ізограмою (всі літери в рядку є унікальними).
+#
+# 11. Determine whether a string is an isogram (all letters in a string are unique).
+
+isogram_word: str = "lumberjacks"
+
+answer: set = set()
+
+for i in isogram_word:
+    if i in answer:
+        print("The {isogram_word} isn't isogram")
+    else:
+        answer.add(i)
+        if len(answer) == len(isogram_word):
+            print(f"The {isogram_word} is an isogram")
+
+
+# 12. Видалити з рядка всі символи, які не є літерами або цифрами.
+#
+# 12. Remove all characters that are not letters or numbers from a string.
+
+string_str: str = "Hello, World! 123"
+result:str = ""
+
+for i in string_str:
+    if i.isalnum():
+        result += i
+
+print(result)
+
+# 13. Написати програму, яка обертає слова в реченні (але не саме речення).
+#
+# 13. Write a program that rotates the words in a sentence (but not the sentence itself).
+
+input_string: str = "This sentence is famous for containing every letter of the English alpha."
+list_input: list = input_string.split(" ")
+answer: list = list()
+
+for i in list_input:
+    answer.append(i[::-1])
+
+print(" ".join(answer))
+
+14. Знайти різницю між кількістю голосних і приголосних літер у рядку.
+
+14. Find the difference between the number of vowels and consonants in the string.
+
+input_string: str = "This sentence is famous for containing every letter of the English alpha."
+vowels_words:str = "AEIOUaeiou"
+
+counter_firs: int = 0
+counter_second: int = 0
+
+for i in input_string:
+    if i in vowels_words:
+        counter_firs += 1
+    else:
+        counter_second += 1
+
+if counter_firs > counter_second:
+    print("There are more vowels than consonants")
+else:
+    print("There are more consonant letters than vowels")
+
+15. Дано рядок. Якщо у цьому рядку літера f зустрічається лише один раз, виведіть її індекс.
+Якщо вона зустрічається два і більше разів, виведіть індекс її першої та останньої появи.
+Якщо літера f у цьому рядку не зустрічається, нічого не виводьте. При вирішенні цього завдання
+не можна використовувати метод count та цикли.
+
+15. Given a string. If the letter f occurs only once in this string, print its index.
+If it occurs two or more times, print the index of its first and last occurrence.
+If the letter f does not occur in this string, do not output anything. When solving this task
+count method and loops cannot be used.
+
+s:str = "example of a string with f and another f"
+
+first_index: int = s.find('f')
+last_index: int = s.rfind('f')
+
+if first_index == -1:
+    pass
+elif first_index == last_index:
+    print(first_index)
+else:
+    print(first_index, last_index)
+
+# 16. Дано рядок, в якому літера h зустрічається щонайменше два рази. Видаліть із цього рядка
+# перше і останнє входження літери h, а також усі символи, що знаходяться між ними.
+#
+# 16. Given a line in which the letter h occurs at least twice. Delete from this row
+# the first and last occurrence of the letter h and all characters in between.
+
+s = "This is a sample text with h and another h in it."
+
+first_h_index = s.find('h')
+last_h_index = s.rfind('h')
+
+s = s.replace(s[last_h_index - 1: last_h_index + 2], "")
+s = s.replace(s[first_h_index - 1: first_h_index + 2], "")
+
+print(s)
+
+
+s = "This is a sample text with h and another h in it."
+
+to_remove = ["Thi", " h "]
+
+for substring in to_remove:
+    s = s.replace(substring, "")
+
+print(s)
+
+# 17. Дано рядок. Видаліть із неї всі символи, чиї індекси діляться на 3.Символи рядка
+# нумеруються, починаючи з нуля.
+#
+# 17. Given a string. Remove from it all characters whose indices are divisible by 3.
+# The characters of the string are numbered starting from zero.
+
+s: str = "abcdefghijklmnopqrstuvwxyz"
+
+result: str = ""
+index: int = 0
+
+for char in s:
+    if index % 3 != 0:
+        result += char
+    index += 1
+
+print(result)
+
 """
 
 Модульні задачі
