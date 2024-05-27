@@ -382,9 +382,9 @@ for i in list_input:
 
 print(" ".join(answer))
 
-14. Знайти різницю між кількістю голосних і приголосних літер у рядку.
-
-14. Find the difference between the number of vowels and consonants in the string.
+# 14. Знайти різницю між кількістю голосних і приголосних літер у рядку.
+#
+# 14. Find the difference between the number of vowels and consonants in the string.
 
 input_string: str = "This sentence is famous for containing every letter of the English alpha."
 vowels_words:str = "AEIOUaeiou"
@@ -403,15 +403,15 @@ if counter_firs > counter_second:
 else:
     print("There are more consonant letters than vowels")
 
-15. Дано рядок. Якщо у цьому рядку літера f зустрічається лише один раз, виведіть її індекс.
-Якщо вона зустрічається два і більше разів, виведіть індекс її першої та останньої появи.
-Якщо літера f у цьому рядку не зустрічається, нічого не виводьте. При вирішенні цього завдання
-не можна використовувати метод count та цикли.
-
-15. Given a string. If the letter f occurs only once in this string, print its index.
-If it occurs two or more times, print the index of its first and last occurrence.
-If the letter f does not occur in this string, do not output anything. When solving this task
-count method and loops cannot be used.
+# 15. Дано рядок. Якщо у цьому рядку літера f зустрічається лише один раз, виведіть її індекс.
+# Якщо вона зустрічається два і більше разів, виведіть індекс її першої та останньої появи.
+# Якщо літера f у цьому рядку не зустрічається, нічого не виводьте. При вирішенні цього завдання
+# не можна використовувати метод count та цикли.
+#
+# 15. Given a string. If the letter f occurs only once in this string, print its index.
+# If it occurs two or more times, print the index of its first and last occurrence.
+# If the letter f does not occur in this string, do not output anything. When solving this task
+# count method and loops cannot be used.
 
 s:str = "example of a string with f and another f"
 
