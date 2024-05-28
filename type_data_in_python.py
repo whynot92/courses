@@ -102,7 +102,7 @@ print(f'Left in the cart {number_of_apples_one % number_of_students_one}')
 
 side_of_a_square: int = 15
 
-print(f'The area of the square is {side_of_a_square * 4}')
+print(f'The area of the square is {side_of_a_square ** 2}')
 
 # 9. Дано натуральне число. Виведіть останню цифру.
 # 9. A natural number is given. Print the last digit.
@@ -111,6 +111,7 @@ value_number: str = input("Write your number here: ")
 
 gen_list = [el for el in value_number if el.isdigit()]
 print(gen_list[-1])
+
 
 # 10. Дано позитивне двозначне число. Знайдіть число десятків у ньому.
 # 10. A positive two-digit number is given. Find the number of tens in it.
@@ -161,4 +162,4 @@ print(f'The biker will stop at a distance of {start + speed_bike} km in one hour
 N: int = int(input("Enter the number of kilometers the car drives per day: "))
 M: int = int(input("Enter the total length of the route in kilometers: "))
 
-print(f"Number of days required to travel the route = {M / N}")
+print(f"Number of days required to travel the route = {M // N+1}")
