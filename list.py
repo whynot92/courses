@@ -321,24 +321,70 @@ Difficult level
 # 1. Create a list of the continents of the Western Hemisphere. Complete the list with continents
 # from the Eastern Hemisphere.Sort the continents alphabetically and display them on the screen
 
+continents_western_hemisphere: list = ["North America", "South America"]
+continents_eastern_hemisphere: list = [
+    "Eurasia (Europe and Asia)", "Africa",
+    "Australia",
+    "Antarctica (partially)"
+]
+
+continents_western_hemisphere.extend(continents_eastern_hemisphere)
+continents_western_hemisphere.sort()
+print(continents_western_hemisphere)
+
 # 2. Порівняти, чи перша літера імені співпадає з першою літерою прізвища і вивести відповідне
 # повідомлення.
 #
 # 2. Compare whether the first letter of the name matches the first letter of the surname and
 # output the corresponding one messages.
 
+persons: list = ["Sergio Sergios" ]
+
+person_compare = " ".join(persons)
+user_list = person_compare.split(" ")
+
+if user_list[0][0] == user_list[1][0]:
+    print("The first letter of the name matches the first letter of the surname are the same")
+else:
+    print("The first letter of the name matches the first letter of the surname aren't the same")
+
 # 3. Таблицю Піфагора помістити в двовимірний список, де кожне число буде елементом списка
 #
 # 3. Place the Pythagorean table in a two-dimensional list, where each number will be
 # an element of the list
 
+
+################################################################
+
+
 # 4. Виведіть елементи цього списку у зворотному порядку, не змінюючи сам список.
 #
 # 4. Output the elements of this list in reverse order without changing the list itself.
 
+elements_list: list = ["a", "b", "c", "d"]
+
+print(elements_list[::-1])
+
 # 5. Напишіть програму, яка знаходить у масиві елемент, найближчий за величиною до цього числа.
 #
 # 5. Write a program that finds the element in the array that is closest in size to this number.
+
+value = [4, 5, 6, 4, 7, 8, 5, 9]
+
+target = 7.4
+new_list = list()
+
+for i in value:
+    if i <= target:
+        new_list.append(i)
+
+answer = max(new_list)
+
+if new_list:
+    closest_element = max(new_list)
+    print(f"The closest element to {target} in the array: {answer}")
+else:
+    print(f"There are no elements in the array that are less than or equal to {target}")
 
 # 6. У списку всі елементи різні різні. Поміняйте місцями мінімальний та максимальний елемент
 # цього списку.
@@ -346,17 +392,52 @@ Difficult level
 # 6. In the list, all the elements are different. Swap the minimum and maximum elements
 # of this list.
 
+list_num: list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+min_index = list_num.index(min(list_num))
+max_index = list_num.index(max(list_num))
+
+list_num[min_index], list_num[max_index] = list_num[max_index], list_num[min_index]
+
+print(list_num)
+
 # 7. Даний список заповнений довільними цілими числами. Знайдіть у списку два числа, добуток
 # яких максимально. Виведіть ці числа в порядку невтрати.
 #
 # 7. This list is filled with arbitrary integers. Find the product of two numbers in the list
 # of which is the maximum. Output these numbers in lossless order.
 
+my_list = [15, 1, 45, 4, 19, 34]
+result_list = []
+
+for i in range(len(my_list) - 1):
+    sum_of_indices = my_list[i] + my_list[i + 1]
+    result_list.append(sum_of_indices)
+
+print(result_list)
+
 # 8. Дано список. Виведіть ті елементи, які зустрічаються у списку лише один раз.
 # Елементи потрібно виводити в порядку, в якому вони зустрічаються в списку.
 #
 # 8. Given a list. Output those elements that occur in the list only once.
 # Items must be displayed in the order they appear in the list.
+
+lst = [4, 5, 6, 4, 7, 8, 5, 9]
+
+dict_num = dict()
+anwer_list = list()
+
+for i in lst:
+    if i in dict_num:
+        dict_num[i] += 1
+    else:
+        dict_num[i] = 1
+
+for i in dict_num:
+    if dict_num[i] == 1:
+        anwer_list.append(i)
+
+print(anwer_list)
 
 # 9. Наведено список цілих чисел. Потрібно "стиснути" його, перемістивши всі ненульові
 # елементи в ліву частину списку, не змінюючи їхній порядок, а всі нулі - у праву частину.
@@ -368,6 +449,16 @@ Difficult level
 # part. The order of non-zero elements cannot be changed, an additional list cannot be used,
 # the task must be completed in one pass through the list. Print the resulting list.
 
+nums: list = [0, 2, 0, 3, 4, 0, 5, 0]
+
+counter: int = 0
+
+for index, value in enumerate(nums):
+    if value == 0:
+        nums.insert(0, nums.pop(index))
+
+print(nums)
+
 # 10. Дано список. Не змінюючи його та не використовуючи додаткові списки, визначте,
 # яке число у цьому списку зустрічається найчастіше. Якщо таких чисел декілька,
 # виведіть будь-яке з них.
@@ -375,3 +466,18 @@ Difficult level
 # 10. Given a list. Without changing it and without using additional lists, determine
 # which number in this list occurs most often. If there are several such numbers,
 # output any of them.
+
+lst = [4, 5, 6, 4, 7, 8, 5, 9]
+
+dict_num = dict()
+
+for i in lst:
+    if i in dict_num:
+        dict_num[i] += 1
+    else:
+        dict_num[i] = 1
+
+for keys, value in dict_num.items():
+    if value == max(dict_num.values()):
+        print(f"number {keys} occurs in the list {value} times")
+        break
