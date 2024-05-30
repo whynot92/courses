@@ -46,8 +46,9 @@ for i in range(user_input):
 # Для початкового значення добутку змінній надаємо значення один. Вхідні дані: 5.
 # Вихідні дані: 120
 #
-# 4. The number n is entered from the keyboard. Find the product of numbers from 1 to this number. 1*2*3*...*n.
-# For the initial value of the product, we assign the value one to the variable. Input data: 5.
+# 4. The number n is entered from the keyboard. Find the product of numbers from 1 to this number.
+# 1*2*3*...*n. For the initial value of the product, we assign the value one to the variable.
+# Input data: 5.
 # Output: 120
 
 number = 5
