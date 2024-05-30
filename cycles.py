@@ -305,3 +305,144 @@ Difficult level
 # for i in range(1, 10):
 #     print("{:^18}".format(icon))
 #     icon += "**"
+
+# # 4. Напишіть програму, яка друкує цілі числа від 1 до n (1 < n ≤ 1000) з такою умовою: для чисел
+# #кратних 3 виводить *3* замість числа, для чисел кратних 5 друкує *5*, а для чисел,
+# # які кратні 3 і 5 одночасно, повідомлення буде *35*. Вхідні дані: 16
+# # Вихідні дані:
+# #
+# # # 4. Write a program that prints integers from 1 to n (1 < n ≤ 1000) with the following
+# # condition: for numbers multiples of 3 prints *3* instead of a number, for numbers that are
+# # multiples of 5 it prints *5*, and for numbers, which are multiples of 3 and 5 at the same time,
+# # the message will be *35*. Input data: 16
+# # Output data:
+# # 1
+# # 2
+# # *3*
+# # 4
+# # *5*
+# # *3*
+# # 7
+# # 8
+# # *3*
+# # *5*
+# # 11
+# # *3*
+# # 13
+# # 14
+# # *35*
+# # 16
+
+# number = int(input("Write here your number: "))
+
+# for i in range(1, number + 1):
+#     if i % 3 == 0 and i % 5 == 0:
+#         print("*35*")
+#     elif i % 3 == 0:
+#         print("*3*")
+#     elif i % 5 == 0:
+#         print("*5*")
+#     else:
+#         print(i)
+
+# # 5.1 Напишіть програму для обчислення виразу 1/2 + 2/3 + 3/4 + …​ + n/(n + 1) із заданим n,
+# # яке вводить користувач (n > 0). Вхідні дані: 3. Вихідні дані: 1.9166666666666665
+
+# number = int(input("Write here your number > 0: "))
+
+# answer = 0
+
+# for i in range(1, number + 1):
+#     answer += i / (i + 1)
+
+# print(answer)
+
+# # 5.2 При заданому користувачем значенні цілого числа n ≥ 2 обчислити вираз
+# # 1 × 2 + 2 × 3 + …​ + (n - 1) × n. Вхідні дані: 3. Вихідні дані: 8
+
+# answer = 0
+
+# for i in range(1, number):
+#     answer += i * (i + 1)
+
+# print(answer)
+
+# # 6. Напишіть програму для побудови шаблону як у вихідних даних за введеним значенням n.
+# # Вхідні дані:8.
+# # Вихідні дані:
+# # 1
+# # 22
+# # 333
+# # 4444
+# # 55555
+# # 666666
+# # 7777777
+# # 88888888
+
+# num = int(input("Write here your number: "))
+
+# for i in range(1, num + 1):
+#     print(str(i) * i)
+
+# # 7. Надрукувати таблицю відповідності між масою у фунтах і масою в кілограмах для значень n
+# # фунтів (1 фунт = 453 г) у вигляді таблиці. Вхідні дані: 5
+# # Вихідні дані:
+# # 1   0.453
+# # 2   0.906
+# # 3   1.359
+# # 4   1.812
+# # 5   2.265
+
+# num = int(input("Write here number of pounds: "))
+
+# pounds_to_kg = 0.453
+
+# for i in range(1, num + 1):
+#     kg = i * pounds_to_kg
+#     print(f"{i}\t{kg}")
+
+# 8. Дано натуральне число N. Виведіть слово YES, якщо число N є точним ступенем двійки, або
+# лово NO інакше. Операцією зведення на ступінь користуватися не можна!
+
+#########################################################################
+
+# 9. Першого дня спортсмен пробіг X кілометрів, а потім він щодня збільшував пробіг на 10%
+# від попереднього значення (для вирішення завдання дозволяється використовувати числа з комою,
+# які в Пітоні пишуться через точку). За даним числом X визначте номер дня, який пробіг
+# спортсмена становитиме щонайменше Y кілометрів.
+
+X = float(input("Write here km in first day: "))
+days = 1
+distance = X
+
+Y = float(input("Write here finish km.: "))
+
+while distance < Y:
+    days += 1
+    distance += distance * 10 / 100
+
+print(f"The sportsman will reach a distance of at least", {Y}, "kilometers on day", {days})
+
+# # 10. Послідовність складається з цілих чисел і завершується числом 0. Визначте значення
+# # найбільшого елемента послідовності.
+# # Вхідні дані:
+# # 1
+# # 7
+# # 9
+# # 0
+# # Виведення програми:
+# # 9
+
+
+# max_number = 0
+
+# while True:
+#     num = int(input("Enter a number (0 to stop): "))
+
+#     if num == 0:
+#         break
+
+#     if num > max_number:
+#         max_number = num
+
+# print("The maximum number is:", max_number)
