@@ -1,0 +1,3 @@
+Ivan = 5
+Vika = 4
+Marshal = 5
