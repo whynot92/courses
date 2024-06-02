@@ -54,25 +54,127 @@ Easy level
 
 # print(tuple_def("hello world"))
 
-# 4. Створіть функцію, яка перевірятиме два числа. Нехай вона виводить повідомлення про те, яке з
-# них більше за інше або якщо вони рівні один одному за значенням.
+# # 4. Створіть функцію, яка перевірятиме два числа. Нехай вона виводить повідомлення про те, яке з
+# # них більше за інше або якщо вони рівні один одному за значенням.
+# #
+# # 4. Create a function that checks two numbers. Let it output a message about which of the
+# # they are greater than the other or if they are equal to each other in value.
 
-# 5. Зробіть функцію, яка перевірятиме тип змінної і якщо вона є числом, то перетворить її на рядок.
+# def equality(a, b):
+#     if a > b:
+#         return print(f'The first number {a} is greater than the second {b}')
+#     elif a < b:
+#         return print(f'The second {b} number is greater than the first {a}')
+#     else:
+#         return print(f"The first {a} and second numbers {b} are the same")
 
-# 6. Зробіть функцію, що заповнює список парними числами 1 від заданого.
+# equality(4,4)
 
-# 7. Нехай у вас є словник, в якому як ключі зберігаються імена користувачів, а як значення - їх
-# вік. Створіть функцію, яка виведе всі пари ключ-значення у вигляді кортежу.
+# # 5. Зробіть функцію, яка перевірятиме тип змінної і якщо вона є числом, то перетворить її на рядок.
+# #
+# # 5. Make a function that will check the type of the variable and if it is a number, then convert
+# # it to a string.
 
-# 8. Зробіть функцію, яка параметром прийматиме число, а повертатиме рядок з відповідним днем ​​тижня.
 
-# 9. Ви отримуєте масив чисел, повертаєте суму всіх додатних.
-# Приклад [1,-4,7,12]=>1 + 7 + 12 = 20
-# Примітка: якщо підсумовувати нічого, сума за замовчуванням дорівнює 0.
+# def audit(a):
+#     if type(a) == type(int()):
+#         return print(f"The argument {a} is a number. That's why we make it a line {str(a)=}")
+#     elif type(a) == type(str()):
+#         return print(f"The argument {a} is a string")
 
-# 10. Напишіть функцію min4(a, b, c, d), яка обчислює мінімум чотирьох чисел, яка не містить
-# інструкції if, а використовує стандартну функцію min від двох чисел. Вважайте чотири цілих
-# числа і виведіть їх мінімум.
+# audit(2)
+
+# # 6. Зробіть функцію, що заповнює список парними числами 1 від заданого.
+# #
+# # 6. Make a function that fills the list with even numbers 1 from the given one.
+
+# user_list = list()
+
+# def random_number():
+#     for i in range(1, 101):
+#         if i % 2 == 0:
+#             user_list.append(i)
+
+#     return user_list
+
+# random_number()
+# print(user_list)
+
+# # 7. Нехай у вас є словник, в якому як ключі зберігаються імена користувачів, а як значення - їх
+# # вік. Створіть функцію, яка виведе всі пари ключ-значення у вигляді кортежу.
+# #
+# # 7. Let you have a dictionary that stores usernames as keys and them as values
+# # age. Create a function that outputs all key-value pairs as a tuple.
+
+# user_ages = {
+#     "Олександр": 25,
+#     "Марія": 30,
+#     "Іван": 22,
+#     "Катерина": 28
+# }
+
+# def print_user_ages(user_ages):
+#     pairs = user_ages.items()
+
+#     for pair in pairs:
+#         print(pair)
+
+# print_user_ages(user_ages)
+
+# # 8. Зробіть функцію, яка параметром прийматиме число, а повертатиме рядок з відповідним днем ​​тижня.
+# #
+# # 8. Make a function that will accept a number as a parameter and return a string with
+# # the corresponding day of the week.
+
+# def get_day_of_week(day_number):
+#     days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+#     if 1 <= day_number <= 7:
+#         return days_of_week[day_number - 1]
+#     else:
+#         return "Invalid day number. Enter a number from 1 to 7."
+
+# day_number = 7
+# day_name = get_day_of_week(day_number)
+# print(f"День номер {day_number} - це {day_name}.")
+
+# # 9. Ви отримуєте масив чисел, повертаєте суму всіх додатних.
+# # Приклад [1,-4,7,12]=>1 + 7 + 12 = 20
+# # Примітка: якщо підсумовувати нічого, сума за замовчуванням дорівнює 0.
+# #
+# # 9. You get an array of numbers, return the sum of all positive ones.
+# # Example [1,-4,7,12]=>1 + 7 + 12 = 20
+# # Note: If there is nothing to sum, the sum defaults to 0.
+
+# list_sum = [1,-4,7,12]
+
+# def sum_num(a):
+#     sum_answer = 0
+
+#     for i in a:
+#         if i > 0:
+#             sum_answer = sum_answer + i
+
+#     return print(sum_answer)
+
+# sum_num(list_sum)
+
+
+# # 10. Напишіть функцію min4(a, b, c, d), яка обчислює мінімум чотирьох чисел, яка не містить
+# # інструкції if, а використовує стандартну функцію min від двох чисел. Вважайте чотири цілих
+# # числа і виведіть їх мінімум.
+# #
+# # 10. Write a function min4(a, b, c, d) that calculates the minimum of four numbers that does not
+# # contain if statements, and uses the standard min function from two numbers. Consider four
+# # integers of numbers and output their minimum.
+
+# a, b, c, d = 4, 2, 7, 3
+
+# def min4(a, b, c, d):
+#     return min(min(a, b), min(c, d))
+
+# minimum = min4(a, b, c, d)
+# print(f"Мінімум чисел {a}, {b}, {c}, {d} - це {minimum}.")
 
 '''
 
