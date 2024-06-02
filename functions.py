@@ -4,23 +4,54 @@
 
 '''
 
-# 1. Нехай у вас є змінні, які приймають ім'я та прізвище студента, номер його курсу. Створіть
-# функцію, яка виведе значення цих змінних на екран. При цьому нехай прізвище виводиться у
-# верхньому регістрі, а ім'я - тільки перша буква.
-#
-# Вхідні дані:
-# Shelder
-# Tomas
-# 5
-#
-# Вихідні дані:
-# SHELDER
-# T
-# 5
+# # 1. Нехай у вас є змінні, які приймають ім'я та прізвище студента, номер його курсу. Створіть
+# # функцію, яка виведе значення цих змінних на екран. При цьому нехай прізвище виводиться у
+# # верхньому регістрі, а ім'я - тільки перша буква.
+# #
+# # 1. Let you have variables that accept the student's first and last name, his course number. Create
+# # a function that will print the values ​​of these variables to the screen. At the same time,
+# # let the last name be displayed in in upper case, and the name - only the first letter.
+# # Вхідні дані:
+# #
+# # Incoming data:
+# # Shelder
+# # Tomas
+# # 5
+# #
+# # Вихідні дані:
+# #
+# # Output data:
+# # SHELDER
+# # T
+# # 5
 
-# 2. Зробіть функцію, яка виводитиме площу прямокутника.
+# def curses(a, b, c):
+#     return print(f'{a.upper()}\n{b[0]}\n{c}')
 
-# 3. Зробіть функцію, яка параметром прийматиме рядок і повертатиме кортеж її символів.
+# curses("Shelder", "Tomas", 5)
+
+# # 2. Зробіть функцію, яка виводитиме площу прямокутника.
+# #
+# # 2. Make a function that will output the area of ​​a rectangle.
+
+# def area_of_rectangle(a, b):
+#     answer = (a + b) * 2
+#     return answer
+
+# print(area_of_rectangle(2, 5))
+
+
+# # 3. Зробіть функцію, яка параметром прийматиме рядок і повертатиме кортеж її символів.
+# #
+# # 3. Make a function that takes a string as a parameter and returns a tuple of its characters.
+
+# def tuple_def(a: str) -> tuple:
+#     answer = list()
+#     for i in a:
+#         answer.append(i)
+#     return tuple(answer)
+
+# print(tuple_def("hello world"))
 
 # 4. Створіть функцію, яка перевірятиме два числа. Нехай вона виводить повідомлення про те, яке з
 # них більше за інше або якщо вони рівні один одному за значенням.
