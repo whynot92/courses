@@ -1,1 +1,5 @@
-Python is awesome!
+Python is a great programming language.
+I love to code in Python.
+Java is also a programming language, but I prefer Python.
+C++ is another programming language that I know.
+I'm not very good at PHP.
