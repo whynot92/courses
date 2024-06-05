@@ -172,5 +172,3 @@
 
 # apple = Apple("Golden", "Yellow", "Sweet")
 # apple.display_info()
-
-    
