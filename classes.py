@@ -237,6 +237,15 @@ class Car(Transport):
     def acceleration(self):
         print("The car accelerates to 100 km/h in 10 seconds")
 
+class Motorcycle(Transport):
+
+    def __init__ (self, brand, year_manufacture, cubic_capacity):
+        super().__init__(brand, year_manufacture)
+        self.cubic_capacity = cubic_capacity
+
+    def cascad(self):
+        print("Motorcycle can perform cascades on a motorcycle track")
+
 # 2. Створити базовий клас Гроші, який представляє грошову суму і має методи для додавання, 
 # віднімання і зміни грошової суми. Потім створити похідні класи Долар і Євро, які успадковуються 
 # від класу Гроші. Кожен з похідних класів повинен мати свою властивість, яка визначає валюту,
