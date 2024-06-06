@@ -1,3 +1,10 @@
+'''
+
+Легкий рівень
+Easy level
+
+'''
+
 # # 1. Реалізуйте клас "Rectangle", який має атрибути "width" та "height",
 # # які відповідають за ширину та висоту прямокутника відповідно. Клас повинен 
 # # також мати методи "area()" та "perimetr()", який повертає площу прямокутника
@@ -172,3 +179,83 @@
 
 # apple = Apple("Golden", "Yellow", "Sweet")
 # apple.display_info()
+
+'''
+
+Складний рівень
+Difficult level
+
+'''
+
+# 1. Створіть систему класів для представлення різних видів транспорту. В системі повинні бути наступні класи:
+#
+# Клас Транспорт:
+# Має атрибути: марка та рік випуску.
+# Має метод рухатися, який виводить повідомлення "Транспорт рухається".
+#
+# Клас Автомобіль:
+# Успадковує клас Транспорт.
+# Додає атрибут об'єм двигуна.
+# Має метод розгін, який виводить повідомлення "Автомобіль розганяється до 100 км/год за 10 секунд".
+#
+# Клас Мотоцикл:
+# Також успадковує клас Транспорт.
+# Додає атрибут кубатура двигуна.
+# Має метод каскад, який виводить повідомлення "Мотоцикл може виконувати каскади на мототрасі".
+#
+# 3. Create a class system to represent different modes of transportation. The system should have the following classes:
+#
+# Class Transport:
+# Has attributes: brand and year of manufacture.
+# Has a move method that outputs the message "Vehicle is moving".
+#
+# Class Car:
+# Inherits the Transport class.
+# Adds an engine volume attribute.
+# Has an acceleration method that displays the message "The car accelerates to 100 km/h in 10 seconds".
+#
+# Class Motorcycle:
+# Also inherits the Transport class.
+# Adds the engine cubic capacity attribute.
+# Has a cascade method that displays the message "Motorcycle can perform cascades on a motorcycle track".
+
+class Transport():
+    
+    def __init__(self, brand="", year_manufacture=0):
+        self.brand = brand
+        self.year_manufacture = year_manufacture
+
+    def move_transport(self):
+        print("Vehicle is moving")
+
+class Car(Transport):
+
+    def __init__(self, brand, year_manufacture, engine_volume=0):
+        super().__init__(brand, year_manufacture)
+        self.engine_volume = engine_volume
+
+    def acceleration(self):
+        print("The car accelerates to 100 km/h in 10 seconds")
+
+class Motorcycle(Transport):
+
+    def __init__ (self, brand, year_manufacture, cubic_capacity):
+        super().__init__(brand, year_manufacture)
+        self.cubic_capacity = cubic_capacity
+
+    def cascad(self):
+        print("Motorcycle can perform cascades on a motorcycle track")
+
+# 2. Створити базовий клас Гроші, який представляє грошову суму і має методи для додавання, 
+# віднімання і зміни грошової суми. Потім створити похідні класи Долар і Євро, які успадковуються 
+# від класу Гроші. Кожен з похідних класів повинен мати свою властивість, яка визначає валюту,
+# та перевизначений метод str() для зручного виводу грошової суми у відповідній валюті.
+#
+# 2. Create a base class Money that represents an amount of money and has methods to add, 
+# subtracting and changing the amount of money. Then create derived classes Dollar and Euro, which are 
+# inherited from the Money class. Each of the derived classes must have its own property that defines 
+# the currency, and an overridden str() method for convenient output of the monetary 
+# amount in the appropriate currency.
+
+class Money():
+    pass
