@@ -187,64 +187,64 @@ Difficult level
 
 '''
 
-# 1. Створіть систему класів для представлення різних видів транспорту. В системі повинні бути наступні класи:
-#
-# Клас Транспорт:
-# Має атрибути: марка та рік випуску.
-# Має метод рухатися, який виводить повідомлення "Транспорт рухається".
-#
-# Клас Автомобіль:
-# Успадковує клас Транспорт.
-# Додає атрибут об'єм двигуна.
-# Має метод розгін, який виводить повідомлення "Автомобіль розганяється до 100 км/год за 10 секунд".
-#
-# Клас Мотоцикл:
-# Також успадковує клас Транспорт.
-# Додає атрибут кубатура двигуна.
-# Має метод каскад, який виводить повідомлення "Мотоцикл може виконувати каскади на мототрасі".
-#
-# 3. Create a class system to represent different modes of transportation. The system should have the following classes:
-#
-# Class Transport:
-# Has attributes: brand and year of manufacture.
-# Has a move method that outputs the message "Vehicle is moving".
-#
-# Class Car:
-# Inherits the Transport class.
-# Adds an engine volume attribute.
-# Has an acceleration method that displays the message "The car accelerates to 100 km/h in 10 seconds".
-#
-# Class Motorcycle:
-# Also inherits the Transport class.
-# Adds the engine cubic capacity attribute.
-# Has a cascade method that displays the message "Motorcycle can perform cascades on a motorcycle track".
+# # 1. Створіть систему класів для представлення різних видів транспорту. В системі повинні бути наступні класи:
+# #
+# # Клас Транспорт:
+# # Має атрибути: марка та рік випуску.
+# # Має метод рухатися, який виводить повідомлення "Транспорт рухається".
+# #
+# # Клас Автомобіль:
+# # Успадковує клас Транспорт.
+# # Додає атрибут об'єм двигуна.
+# # Має метод розгін, який виводить повідомлення "Автомобіль розганяється до 100 км/год за 10 секунд".
+# #
+# # Клас Мотоцикл:
+# # Також успадковує клас Транспорт.
+# # Додає атрибут кубатура двигуна.
+# # Має метод каскад, який виводить повідомлення "Мотоцикл може виконувати каскади на мототрасі".
+# #
+# # 3. Create a class system to represent different modes of transportation. The system should have the following classes:
+# #
+# # Class Transport:
+# # Has attributes: brand and year of manufacture.
+# # Has a move method that outputs the message "Vehicle is moving".
+# #
+# # Class Car:
+# # Inherits the Transport class.
+# # Adds an engine volume attribute.
+# # Has an acceleration method that displays the message "The car accelerates to 100 km/h in 10 seconds".
+# #
+# # Class Motorcycle:
+# # Also inherits the Transport class.
+# # Adds the engine cubic capacity attribute.
+# # Has a cascade method that displays the message "Motorcycle can perform cascades on a motorcycle track".
 
-class Transport():
+# class Transport():
     
-    def __init__(self, brand="", year_manufacture=0):
-        self.brand = brand
-        self.year_manufacture = year_manufacture
+#     def __init__(self, brand="", year_manufacture=0):
+#         self.brand = brand
+#         self.year_manufacture = year_manufacture
 
-    def move_transport(self):
-        print("Vehicle is moving")
+#     def move_transport(self):
+#         print("Vehicle is moving")
 
-class Car(Transport):
+# class Car(Transport):
 
-    def __init__(self, brand, year_manufacture, engine_volume=0):
-        super().__init__(brand, year_manufacture)
-        self.engine_volume = engine_volume
+#     def __init__(self, brand, year_manufacture, engine_volume=0):
+#         super().__init__(brand, year_manufacture)
+#         self.engine_volume = engine_volume
 
-    def acceleration(self):
-        print("The car accelerates to 100 km/h in 10 seconds")
+#     def acceleration(self):
+#         print("The car accelerates to 100 km/h in 10 seconds")
 
-class Motorcycle(Transport):
+# class Motorcycle(Transport):
 
-    def __init__ (self, brand, year_manufacture, cubic_capacity):
-        super().__init__(brand, year_manufacture)
-        self.cubic_capacity = cubic_capacity
+#     def __init__ (self, brand, year_manufacture, cubic_capacity):
+#         super().__init__(brand, year_manufacture)
+#         self.cubic_capacity = cubic_capacity
 
-    def cascad(self):
-        print("Motorcycle can perform cascades on a motorcycle track")
+#     def cascad(self):
+#         print("Motorcycle can perform cascades on a motorcycle track")
 
 # 2. Створити базовий клас Гроші, який представляє грошову суму і має методи для додавання, 
 # віднімання і зміни грошової суми. Потім створити похідні класи Долар і Євро, які успадковуються 
