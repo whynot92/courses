@@ -1,5 +1,5 @@
 import requests
-
+#1
 respons = requests.get('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5')
 
 usd = respons.json()[1]['buy']
