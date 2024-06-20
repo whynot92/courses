@@ -24,12 +24,12 @@ def get_ads_on_first_page(url, page):
             price_ad = i.find('p', class_='css-tyui9s er34gjf0')
             get_class_link = i.find('a', class_='css-z3gu2d')
             link_ads = get_class_link.get('href')
-            # Витягуємо опис квартири
+            # Витягуємо опис квартири, та ціну в USD
             response_ad = requests.get(f'https://olx.ua{link_ads}')
             soup_ad = bs(response_ad.text, 'lxml')
             descrip_ad = soup_ad.find('div', class_='css-1t507yq er34gjf0')
             price_usd = soup_ad.find('h3', class_='css-12vqlj3')
-            # Створюємо вигляд пропозиції по пропозиції(назва, посилання, локація, опис, валюта)
+            # Створюємо вигляд пропозиції(назва, посилання, локація, опис, валюта)
             values = (f'{name_ad.text}\n'
                       f'{locat_date_ad.text}\n'
                       f'\n'
