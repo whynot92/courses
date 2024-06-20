@@ -44,7 +44,7 @@ tk.set_appearance_mode('System')
 
 window = tk.CTk()
 window.title('Scraper site')
-window.iconbitmap('homework_OLX\\seo_marketing_finance_management_business_icon_263053.ico')
+window.iconbitmap('web_scraping\\first_practice\\seo_marketing_finance_management_business_icon_263053.ico')
 window.geometry('200x200')
 
 
