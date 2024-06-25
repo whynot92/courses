@@ -47,12 +47,18 @@ def time_comparisons(finish_info):
             return answer
     return None
 
-def message_in_telegram(answer):
+def message_in_telegram():
     global message_sent
-    if answer is not None and not message_sent:
+    url = 'https://deepstat.xyz/areas.php'
+    all_tr = get_all_tr(url)
+    all_td = get_all_td(all_tr)
+    finish_info = get_dict(all_td)
+    comparisons = time_comparisons(finish_info)
+
+    if comparisons is not None and not message_sent:
         bot_token = "7310573884:AAHqe2f5ED23UCGS6GCcDywzHBciZaHE7yI"
         group_id = "-4201133737"
-        url = f"https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={group_id}&text={answer}"
+        url = f"https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={group_id}&text={comparisons}"
         response = requests.get(url)
         if response.status_code != 200:
             print(f"Ошибка при отправке сообщения: {response.status_code}")
@@ -63,13 +69,7 @@ def message_in_telegram(answer):
         print("На сегодня нет данных или сообщение уже отправлено, сообщение не отправлено")
 
 def main():
-    url = 'https://deepstat.xyz/areas.php'
-    all_tr = get_all_tr(url)
-    all_td = get_all_td(all_tr)
-    finish_info = get_dict(all_td)
-    comparisons = time_comparisons(finish_info)
-    
-    schedule.every(120).seconds.do(lambda: message_in_telegram(comparisons))
+    schedule.every(120).seconds.do(message_in_telegram)
 
     while True:
         schedule.run_pending()
