@@ -3,10 +3,16 @@ from bs4 import BeautifulSoup
 
 def get_all_actions(url):
     resp = requests.get(url)
-    soup = BeautifulSoup(resp.text, 'lxml')
 
-    all_actions = soup.find_all('div', class_='actions-list__item')
-    return all_actions
+    with open('atbmarket.html', 'w') as f:
+        f.write(resp.text)
+    
+
+    # soup = BeautifulSoup(resp.text, 'lxml')
+
+    # all_actions = soup.find('div', class_='actions-list')
+    # print(all_actions)
+    # return all_actions
 
 def get_images_promo(all_action):
     list_info_actions = []

@@ -54,7 +54,7 @@ def message_in_telegram():
     all_td = get_all_td(all_tr)
     finish_info = get_dict(all_td)
     comparisons = time_comparisons(finish_info)
-
+    print(comparisons)
     if comparisons is not None and not message_sent:
         bot_token = "7310573884:AAHqe2f5ED23UCGS6GCcDywzHBciZaHE7yI"
         group_id = "-4201133737"
@@ -69,7 +69,7 @@ def message_in_telegram():
         print("На сегодня нет данных или сообщение уже отправлено, сообщение не отправлено")
 
 def main():
-    schedule.every(120).seconds.do(message_in_telegram)
+    schedule.every(5).seconds.do(message_in_telegram)
 
     while True:
         schedule.run_pending()
