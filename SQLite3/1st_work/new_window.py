@@ -3,7 +3,6 @@ import sqlite3
 
 def update_bd(name, number):
 
-
     with sqlite3.connect(F'SQLite3\\1st_work\\number_phone.bd') as bd:
         cursor = bd.cursor()
 
