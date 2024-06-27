@@ -37,8 +37,8 @@ def main():
     app.title('My Telephone book')
 
     img_add = PILImage.open(f'SQLite3\\1st_work\\img\\icons8-добавить-файл-64.png')
-    img_add = img_add.resize((64, 64))  # Resize image if necessary
-    img_add = cs.CTkImage(img_add)  # Create CTkImage object
+    img_add = img_add.resize((64, 64))
+    img_add = cs.CTkImage(img_add)
 
     cs.CTkButton(app, text='Додати контакт       ', image=img_add, height=40, command=add_new_window).place(x=5, y=5)
 
@@ -62,3 +62,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
