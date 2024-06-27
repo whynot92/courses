@@ -4,6 +4,28 @@ import customtkinter as cs
 from tkinter import *
 from new_window import add_new_window
 
+def fetch_contacts():
+    with sqlite3.connect(f"C:\\Programming\\courses\\SQLite3\\1st_work\\number_phone.bd") as conn:
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT name, phone FROM number")
+        contacts = cursor.fetchall()
+    return contacts
+
+def clear_frame(frame):
+    for widget in frame.winfo_children():
+        widget.destroy()
+
+def update_frame_with_contacts(my_frame):
+    clear_frame(my_frame)
+    conttacts = fetch_contacts()
+
+    for index, cont in enumerate(conttacts):
+        name, phone = cont
+
+        label = cs.CTkLabel(my_frame, text=f"{index + 1}. {name}: {phone}")
+        label.pack(anchor='w', padx=10, pady=5)
+
 def main():
     cs.set_appearance_mode('Default')
     cs.set_default_color_theme('blue')
@@ -35,7 +57,7 @@ def main():
     img_update = img_update.resize((64, 64))
     img_update = cs.CTkImage(img_update)
 
-    cs.CTkButton(app, text='Оновити контакти', image=img_update, height=40).place(x=260, y=60)
+    cs.CTkButton(app, text='Оновити контакти', image=img_update, height=40, command=lambda: update_frame_with_contacts(my_frame)).place(x=260, y=60)
 
     my_frame = cs.CTkScrollableFrame(app, width=430, height=360)
     my_frame.place(x=4, y=110)
