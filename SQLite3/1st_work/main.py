@@ -6,7 +6,7 @@ from new_window import add_new_window
 from del_window import del_user_window
 
 def fetch_contacts():
-    with sqlite3.connect(f"SQLite3\\1st_work\\number_phone.bd") as conn:
+    with sqlite3.connect(f"C:\\Programming\\courses\\SQLite3\\1st_work\\number_phone.bd") as conn:
         cursor = conn.cursor()
 
         cursor.execute("SELECT name, phone FROM number")
